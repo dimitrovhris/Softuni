@@ -12,10 +12,15 @@ public class Ex04ArrayRotation {
                 .toArray();
         int n = Integer.parseInt(sc.nextLine());
         for(int i = 1; i <= n; i++){
+            int begin = array[0];
+
             for(int j = 0; j <= array.length-2;j++){
-                array[array.length-1] = array[0];
                 array[j] = array[j+1];
             }
+            array[array.length-1] = begin;
+        }
+        for(int item: array){
+            System.out.printf("%d ", item);
         }
     }
 }
