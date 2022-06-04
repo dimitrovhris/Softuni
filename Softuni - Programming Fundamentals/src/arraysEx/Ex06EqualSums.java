@@ -14,20 +14,12 @@ public class Ex06EqualSums {
         for (int i = 0; i <= arr.length - 1; i++) {
             int leftSum = 0;
             int rightSum = 0;
-            boolean rightSummed = false;
-            boolean leftSummed = false;
-            if (i == 0) {
-                leftSummed = true;
-            }
-            if (i == arr.length - 1) {
-                rightSummed = true;
-            }
-            if (!leftSummed) {
+            if (i != 0) {
                 for (int j = 0; j <= i - 1; j++) {
                     leftSum += arr[j];
                 }
             }
-            if (!rightSummed) {
+            if (i != arr.length-1) {
                 for (int k = i + 1; k <= arr.length - 1; k++) {
                     rightSum += arr[k];
                 }
