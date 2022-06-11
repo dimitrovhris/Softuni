@@ -21,7 +21,7 @@ public class Ex06EqualArrays {
             }
             else{
                 difference = true;
-                System.out.printf("Arrays are not identical. Found difference at %d index.",i);
+                System.out.printf("Arrays are not identical. Found difference at %d index.html.",i);
                 break;
             }
         }
