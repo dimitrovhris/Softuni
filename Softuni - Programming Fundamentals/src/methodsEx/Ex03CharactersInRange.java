@@ -10,7 +10,9 @@ public class Ex03CharactersInRange {
         receiveCharactersInRange(inputChar1, inputChar2);
     }
     public static void receiveCharactersInRange(char char1, char char2){
-        for(int i = char1 + 1; i <= char2 - 1; i++){
+        char lowestChar = (char)Math.min(char1, char2);
+        char biggerChar = (char)Math.max(char1, char2);
+        for(int i = lowestChar + 1; i <= biggerChar - 1; i++){
             System.out.printf("%c ", i);
         }
     }
