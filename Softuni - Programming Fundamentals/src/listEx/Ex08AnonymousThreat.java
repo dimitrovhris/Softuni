@@ -32,17 +32,19 @@ public class Ex08AnonymousThreat {
                     }
                     break;
                 case "divide":
-                    String wordToDivide = info.get(num1);
-                    info.remove(num1);
-                    int index = num1;
-                    int whiteSpaces = wordToDivide.length() / num2;
-                    int startSubstring = 0;
+                    if(num2 != 0){
+                        String wordToDivide = info.get(num1);
+                        info.remove(num1);
+                        int index = num1;
+                        int whiteSpaces = wordToDivide.length() / num2;
+                        int startSubstring = 0;
                     for(int i = 1; i <= num2-1; i++){
                         info.add(index, wordToDivide.substring(startSubstring, startSubstring+ whiteSpaces));
                         index++;
                         startSubstring += whiteSpaces;
                     }
-                    info.add(wordToDivide.substring(index));
+                    info.add(wordToDivide.substring(startSubstring));
+                    }
                     break;
             }
             input = sc.nextLine();
