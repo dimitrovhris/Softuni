@@ -14,8 +14,8 @@ public class Ex02SpaceTravel {
             switch(command){
                 case "Travel":
                     int lightYears = Integer.parseInt(commands[i].split(" ")[1]);
-                    if(fuel >= lightYears){
-                        fuel -= lightYears;
+                    int fuelLeft = fuel - lightYears;
+                    if(fuelLeft >= 0){
                         System.out.printf("The spaceship travelled %d light-years.%n", lightYears);
                     }
                     else{
@@ -49,6 +49,8 @@ public class Ex02SpaceTravel {
                     break;
                 case "Titan":
                     System.out.println("You have reached Titan, all passengers are safe.");
+                    missionFailed = true;
+                    break;
             }
             if(missionFailed){
                 break;
