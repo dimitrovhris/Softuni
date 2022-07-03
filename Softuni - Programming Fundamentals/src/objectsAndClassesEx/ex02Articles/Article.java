@@ -1,4 +1,4 @@
-package objectsAndClassesEx.Ex02Articles;
+package objectsAndClassesEx.ex02Articles;
 
 public class Article {
     private String title;

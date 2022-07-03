@@ -1,4 +1,4 @@
-package objectsAndClassesEx.Ex03OpinionPoll;
+package objectsAndClassesEx.ex03OpinionPoll;
 
 public class Person {
     private String name;
