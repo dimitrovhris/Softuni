@@ -13,10 +13,10 @@ public class StreamAPI {
         int[] nums = Arrays.stream(input.split(" "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
+
         int minNum = Arrays.stream(nums).
                 min().
                 getAsInt();
-
         int maxNum = Arrays.stream(nums)
                 .max().
                 getAsInt(); //orElse!
