@@ -17,7 +17,7 @@ public class Ex06Courses {
             input = sc.nextLine();
         }
         for (Map.Entry<String, List<String>> entry: list.entrySet()) {
-            System.out.printf("%s : %d%n", entry.getKey(), entry.getValue().size());
+            System.out.printf("%s: %d%n", entry.getKey(), entry.getValue().size());
             for(int i = 0; i <= entry.getValue().size()-1; i++){
                 System.out.printf("-- %s%n", entry.getValue().get(i));
             }
