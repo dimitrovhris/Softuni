@@ -52,17 +52,18 @@ public class MoreEx01Ranking {
                 bestStudent = entry.getKey();
             }
         }
-        Map<String, Integer> reversed = new LinkedHashMap<>();
+
         System.out.printf("Best candidate is %s with total %d points.%n", bestStudent, maxPoints);
-        System.out.println("Ranking:");
+        System.out.println("Ranking: ");
         for (Map.Entry<String, Map<String, Integer>> entry : studentsInfo.entrySet()) {
+            Map<String, Integer> reversed = new LinkedHashMap<>();
             System.out.println(entry.getKey());
             entry.getValue().entrySet()
                     .stream()
                     .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                     .forEachOrdered(x -> reversed.put(x.getKey(), x.getValue()));
             for (Map.Entry<String, Integer> innerEntry : reversed.entrySet()){
-                System.out.printf("# %s -> %d%n", innerEntry.getKey(), innerEntry.getValue());
+                System.out.printf("#  %s -> %d%n", innerEntry.getKey(), innerEntry.getValue());
             }
         }
     }
