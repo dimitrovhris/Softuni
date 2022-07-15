@@ -38,4 +38,5 @@ public class Ex08LettersChangeNumbers {
         }
         System.out.printf("%.2f", totalSum);
     }
+
 }
