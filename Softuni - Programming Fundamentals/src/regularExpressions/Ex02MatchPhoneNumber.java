@@ -1,4 +1,4 @@
-package egularExpressions;
+package regularExpressions;
 
 import java.util.ArrayList;
 import java.util.List;

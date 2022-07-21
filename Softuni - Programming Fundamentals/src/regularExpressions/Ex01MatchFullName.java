@@ -1,4 +1,4 @@
-package egularExpressions;
+package regularExpressions;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
