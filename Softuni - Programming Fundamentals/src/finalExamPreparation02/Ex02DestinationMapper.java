@@ -10,7 +10,7 @@ public class Ex02DestinationMapper {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
-        Pattern pattern = Pattern.compile("([=\\/])(?<destination>[A-Z][a-zA-Z]{2,})\\1");
+        Pattern pattern = Pattern.compile("([=/])(?<destination>[A-Z][a-zA-Z]{2,})\\1");
         Matcher matcher = pattern.matcher(input);
         List<String> destinations = new ArrayList<>();
         int totalPoints = 0;
