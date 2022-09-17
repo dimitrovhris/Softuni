@@ -17,7 +17,8 @@ public class Ex08BrowserHistoryUpdate {
                     input = sc.nextLine();
                     continue;
                 } else{
-                    currentURL = forward.poll();
+                    history.push(currentURL);
+                    currentURL = forward.pop();
                 }
             } else if (input.equals("back")) {
                 if (history.isEmpty()) {
@@ -25,7 +26,7 @@ public class Ex08BrowserHistoryUpdate {
                     input = sc.nextLine();
                     continue;
                 } else {
-                    forward.offer(currentURL);
+                    forward.push(currentURL);
                     currentURL = history.pop();
                 }
             } else {
