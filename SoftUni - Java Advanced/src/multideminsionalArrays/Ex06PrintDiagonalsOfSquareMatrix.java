@@ -1,7 +1,6 @@
 package multideminsionalArrays;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex06PrintDiagonalsOfSquareMatrix {
@@ -9,19 +8,25 @@ public class Ex06PrintDiagonalsOfSquareMatrix {
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
         int [][] square = new int[n][n];
+        int row = 0;
+        int col = 0;
         for(int i = 0; i < n; i++){
-            for(int j = 0; j < n; j++){
-                square[i][j] = sc.nextInt();
-            }
+            square[i] = Arrays.stream(sc.nextLine().split(" "))
+                    .mapToInt(Integer::parseInt)
+                    .toArray();
         }
-        for(int i = 0; i < n; i++){
-            System.out.printf("%d ", square[i][i]);
+        while(row < square.length && col < square.length){
+            System.out.print(square[row][col] + " ");
+            row++;
+            col++;
         }
         System.out.println();
-        int j = 0;
-        for(int i = n -1; i >= 0; i--){
-            System.out.printf("%d ", square[i][j]);
-            j++;
+        row = square.length - 1;
+        col = 0;
+        while(row >= 0 && col < square.length){
+            System.out.print(square[row][col] + " ");
+            row--;
+            col++;
         }
     }
 }
