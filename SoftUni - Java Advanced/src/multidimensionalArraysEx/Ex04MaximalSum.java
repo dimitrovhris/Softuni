@@ -23,13 +23,13 @@ public class Ex04MaximalSum {
 
                 array[0] = matrix[i - 1][j-1];
                 array[1] = matrix[i - 1][j];
-                array[2] = matrix[i+1][j+1];
+                array[2] = matrix[i-1][j+1];
                 array[3] = matrix[i][j-1];
                 array[4] = matrix[i][j];
                 array[5] = matrix[i][j + 1];
                 array[6] = matrix[i+1][j - 1];
                 array[7] = matrix[i + 1][j];
-                array[8] = matrix[i - 1][j + 1];
+                array[8] = matrix[i + 1][j + 1];
                 int totalSum = 0;
                 for(int num: array){
                     totalSum += num;
