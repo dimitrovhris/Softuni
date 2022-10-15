@@ -14,13 +14,13 @@ public class Box<T> {
         list.add(string);
     }
 
-    public List<T> getList() {
-        return list;
+    public void swap(int index1, int index2){
+        T element1 = list.get(index1);
+        T element2 = list.get(index2);
+        list.set(index1, element2);
+        list.set(index2, element1);
     }
 
-    public void setList(List<T> list) {
-        this.list = list;
-    }
 
     @Override
     public String toString() {
