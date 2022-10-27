@@ -1,4 +1,4 @@
-package hotelReservation;
+package workingWithAbstraction.hotelReservation;
 
 public enum DiscountType {
     VIP("VIP", 20),

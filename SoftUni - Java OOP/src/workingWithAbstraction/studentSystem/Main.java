@@ -1,4 +1,4 @@
-package studentSystem;
+package workingWithAbstraction.studentSystem;
 
 import java.util.Scanner;
 

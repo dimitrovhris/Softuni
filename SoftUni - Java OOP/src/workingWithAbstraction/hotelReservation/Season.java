@@ -1,4 +1,4 @@
-package hotelReservation;
+package workingWithAbstraction.hotelReservation;
 
 public enum Season {
     SPRING("Spring", 2),

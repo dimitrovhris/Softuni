@@ -1,4 +1,4 @@
-package hotelReservation;
+package workingWithAbstraction.hotelReservation;
 
 public class PriceCalculator {
     public static double calculateHolidayPrice(String[] array){
