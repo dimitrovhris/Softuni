@@ -5,10 +5,10 @@ public class Person {
     private double salary;
 
     public Person(String firstName, String lastName, int age, double salary) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.salary = salary;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setAge(age);
+        setSalary(salary);
     }
 
     public String getFirstName() {
@@ -16,7 +16,11 @@ public class Person {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        if (firstName.length() < 3) {
+            throw new IllegalArgumentException("First name cannot be less than 3 symbols");
+        } else {
+            this.firstName = firstName;
+        }
     }
 
     public String getLastName() {
@@ -24,6 +28,9 @@ public class Person {
     }
 
     public void setLastName(String lastName) {
+        if (lastName.length() < 3) {
+            throw new IllegalArgumentException("Last name cannot be less than 3 symbols");
+        }
         this.lastName = lastName;
     }
 
@@ -32,6 +39,9 @@ public class Person {
     }
 
     public void setAge(int age) {
+        if (age <= 0) {
+            throw new IllegalArgumentException("Age cannot be zero or negative integer");
+        }
         this.age = age;
     }
 
@@ -40,18 +50,22 @@ public class Person {
     }
 
     public void setSalary(double salary) {
+        if (salary < 460) {
+            throw new IllegalArgumentException("Salary cannot be less than 460 leva");
+        }
         this.salary = salary;
     }
 
-    public void increaseSalary(double percent){
-        if(this.getAge() < 30){
+    public void increaseSalary(double percent) {
+        if (this.getAge() < 30) {
             this.setSalary(this.getSalary() + (this.getSalary() * percent / 200));
-        } else{
+        } else {
             this.setSalary(this.getSalary() + (this.getSalary() * percent / 100));
         }
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         return String.format("%s %s gets %.2f leva", firstName, lastName, salary);
     }
 }

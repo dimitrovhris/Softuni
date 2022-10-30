@@ -10,17 +10,21 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(reader.readLine());
         List<Person> people = new ArrayList<>();
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             String[] data = reader.readLine().split(" ");
             String firstName = data[0];
             String lastName = data[1];
             int age = Integer.parseInt(data[2]);
             double salary = Double.parseDouble(data[3]);
-            people.add(new Person(firstName, lastName, age, salary));
+            try {
+                people.add(new Person(firstName, lastName, age, salary));
+            } catch (IllegalArgumentException e){
+                System.out.println(e.getMessage());
+            }
         }
         double percent = Double.parseDouble(reader.readLine());
 
-        for(Person person: people){
+        for (Person person : people) {
             person.increaseSalary(percent);
             System.out.println(person.toString());
         }
