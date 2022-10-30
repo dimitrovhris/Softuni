@@ -15,17 +15,13 @@ public class Main {
             String firstName = data[0];
             String lastName = data[1];
             int age = Integer.parseInt(data[2]);
-            people.add(new Person(firstName, lastName, age));
+            double salary = Double.parseDouble(data[3]);
+            people.add(new Person(firstName, lastName, age, salary));
         }
-        people.sort((p1, p2) -> {
-            int nameComparator = p1.getFirstName().compareTo(p2.getFirstName());
-            if (nameComparator != 0) {
-                return nameComparator;
-            } else {
-                return Integer.compare(p1.getAge(), p2.getAge());
-            }
-        });
+        double percent = Double.parseDouble(reader.readLine());
+
         for(Person person: people){
+            person.increaseSalary(percent);
             System.out.println(person.toString());
         }
     }
