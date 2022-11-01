@@ -1,32 +1,25 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(reader.readLine());
-        List<Person> people = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            String[] data = reader.readLine().split(" ");
-            String firstName = data[0];
-            String lastName = data[1];
-            int age = Integer.parseInt(data[2]);
-            double salary = Double.parseDouble(data[3]);
-            try {
-                people.add(new Person(firstName, lastName, age, salary));
-            } catch (IllegalArgumentException e){
-                System.out.println(e.getMessage());
-            }
+        double length = Double.parseDouble(reader.readLine());
+        double width = Double.parseDouble(reader.readLine());
+        double height = Double.parseDouble(reader.readLine());
+        boolean invalidData = false;
+        Box box = null;
+        try {
+            box = new Box(length, width, height);
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+            invalidData = true;
         }
-        double percent = Double.parseDouble(reader.readLine());
-
-        for (Person person : people) {
-            person.increaseSalary(percent);
-            System.out.println(person.toString());
+        if(!invalidData){
+            System.out.printf("Surface Area - %.2f%n", box.calculateSurfaceArea());
+            System.out.printf("Lateral Surface Area - %.2f%n", box.calculateLateralSurfaceArea());
+            System.out.printf("Volume - %.2f%n", box.calculateVolume());
         }
     }
 }
