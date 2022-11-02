@@ -1,3 +1,5 @@
+package encapsulationEx;
+
 public class Chicken {
     private String name;
     private int age;
@@ -32,7 +34,7 @@ public class Chicken {
     }
     @Override
     public String toString(){
-        return String.format("Chicken %s (age %d) can produce %.2f eggs per day.", name, age, productPerDay());
+        return String.format("encapsulationEx.Chicken %s (age %d) can produce %.2f eggs per day.", name, age, productPerDay());
     }
 
 }

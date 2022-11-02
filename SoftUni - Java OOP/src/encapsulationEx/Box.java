@@ -1,3 +1,5 @@
+package encapsulationEx;
+
 public class Box {
     private double length;
     private double width;
