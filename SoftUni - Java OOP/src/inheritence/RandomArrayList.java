@@ -1,3 +1,5 @@
+package inheritence;
+
 import java.util.ArrayList;
 import java.util.Random;
 
