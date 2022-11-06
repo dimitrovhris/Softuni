@@ -1,3 +1,5 @@
+package encapsulationEx;
+
 import java.util.List;
 
 public class Topping {

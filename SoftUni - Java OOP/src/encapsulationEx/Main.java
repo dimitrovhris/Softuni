@@ -1,67 +1,55 @@
 package encapsulationEx;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.Scanner;
+
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String[] people = reader.readLine().split(";");
-        String[] products = reader.readLine().split(";");
-        Map<String, Person> personMap = new LinkedHashMap<>();
-        Map<String, Product> productList = new LinkedHashMap<>();
-        for (String person : people) {
-            String[] personData = person.split("=");
-            try {
-                Person newPerson = new Person(personData[0], Double.parseDouble(personData[1]));
-                personMap.put(personData[0], newPerson);
-            } catch (IllegalArgumentException e) {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] pizzaData = sc.nextLine().split(" ");
+        String name = pizzaData[1];
+        int numberOfToppings = Integer.parseInt(pizzaData[2]);
+        boolean error = false;
+        Pizza pizza = null;
+        try {
+            pizza = new Pizza(name, numberOfToppings);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            error = true;
+        }
+        String[] doughData = sc.nextLine().split(" ");
+        try {
+            Dough dough = new Dough(doughData[1], doughData[2], Double.parseDouble(doughData[3]));
+            if (pizza != null) {
+                pizza.setDough(dough);
+            }
+        } catch (IllegalArgumentException e) {
+            if (!error) {
                 System.out.println(e.getMessage());
             }
+            error = true;
         }
-        for (String product : products) {
-            String[] productData = product.split("=");
-            try {
-                Product newProduct = new Product(productData[0], Double.parseDouble(productData[1]));
-                productList.put(newProduct.getName(), newProduct);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        String input = reader.readLine();
+
+        String input = sc.nextLine();
         while (!input.equals("END")) {
-            String[] purchaseData = input.split(" ");
-            Person person = personMap.get(purchaseData[0]);
-            Product product = productList.get(purchaseData[1]);
+            String[] toppingData = input.split(" ");
+            String toppingType = toppingData[1];
+            double toppingWeight = Double.parseDouble(toppingData[2]);
             try {
-                if (person != null) {
-                    person.buyProduct(product);
-                    System.out.println(purchaseData[0] + " bought " + purchaseData[1]);
+                Topping topping = new Topping(toppingType, toppingWeight);
+                if (pizza != null) {
+                    pizza.addTopping(topping);
                 }
             } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-                break;
-            }
-            input = reader.readLine();
-        }
-        for (Map.Entry<String, Person> entry : personMap.entrySet()) {
-            if (entry.getValue().getProducts().isEmpty()) {
-                System.out.printf("%s - Nothing bought%n", entry.getKey());
-            } else {
-                System.out.print(entry.getKey() + " - ");
-                List<String> list = new ArrayList<>();
-                for (Product product : entry.getValue().getProducts()) {
-                    list.add(product.getName());
+                if (!error) {
+                    System.out.println(e.getMessage());
                 }
-                System.out.print(String.join(", ", list));
-                System.out.println();
+                error = true;
             }
+            input = sc.nextLine();
+        }
+        if (!error) {
+            System.out.printf("%s - %.2f", pizza.getName(), pizza.getOverallCalories());
         }
     }
 }
-

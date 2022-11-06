@@ -1,3 +1,5 @@
+package encapsulationEx;
+
 import java.util.List;
 
 public class Dough {
@@ -26,7 +28,7 @@ public class Dough {
     }
     private void setWeight(double weight){
         if(weight < 1 || weight > 200){
-            throw new IllegalArgumentException("Dough weight should be in the range [1..200].");
+            throw new IllegalArgumentException("encapsulationEx.Dough weight should be in the range [1..200].");
         }
         this.weight = weight;
     }
