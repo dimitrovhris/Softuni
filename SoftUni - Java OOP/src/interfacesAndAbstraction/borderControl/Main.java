@@ -1,6 +1,7 @@
+package interfacesAndAbstraction.borderControl;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -30,7 +31,6 @@ public class Main {
         robots.stream()
                 .filter(e-> e.getId().endsWith(validator))
                 .forEach(e -> System.out.println(e.getId()));
-
     }
 }
 
