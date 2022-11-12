@@ -1,3 +1,5 @@
+package interfacesAndAbstraction;
+
 public class Audi extends CarImpl implements Rentable {
     private Integer minRentDay;
     private Double pricePerDay;

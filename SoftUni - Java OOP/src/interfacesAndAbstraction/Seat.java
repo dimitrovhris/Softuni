@@ -1,3 +1,5 @@
+package interfacesAndAbstraction;
+
 public class Seat extends CarImpl implements Sellable{
    private Double price;
 
