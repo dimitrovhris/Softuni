@@ -1,7 +1,9 @@
-public class Chinese extends BasePerson{
+package interfacesAndAbstraction;
+
+public class Bulgarian extends BasePerson{
     private String name;
 
-    public Chinese(String name) {
+    public Bulgarian(String name) {
         super(name);
     }
 
@@ -12,6 +14,6 @@ public class Chinese extends BasePerson{
 
     @Override
     public String sayHello() {
-        return "Djydjybydjy";
+        return "Здравей";
     }
 }

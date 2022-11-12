@@ -1,3 +1,7 @@
+package interfacesAndAbstraction;
+
+import interfacesAndAbstraction.BasePerson;
+
 public class European extends BasePerson {
     private String name;
 
