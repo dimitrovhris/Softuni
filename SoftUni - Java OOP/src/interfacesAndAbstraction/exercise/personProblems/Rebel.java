@@ -1,3 +1,5 @@
+package interfacesAndAbstraction.exercise.personProblems;
+
 public class Rebel implements Buyer{
     private String name;
     private int age;

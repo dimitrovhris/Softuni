@@ -1,3 +1,5 @@
+package interfacesAndAbstraction.exercise.personProblems;
+
 public class Citizen implements Person, Birthable, Identifiable, Buyer{
     private String name;
     private int age;
