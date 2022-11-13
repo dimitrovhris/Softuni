@@ -1,7 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-
-        System.out.println(MathOperation.add(5, 8, 9, 10));
+        Shape rect = new Rectangle(5.00, 4.00);
+        Shape circle = new Circle(3.00);
+        printShape(rect);
+        printShape(circle);
     }
-
+    private static void printShape(Shape shape){
+        System.out.println(shape.calculateArea());
+        System.out.println(shape.calculatePerimeter());
+    }
 }
