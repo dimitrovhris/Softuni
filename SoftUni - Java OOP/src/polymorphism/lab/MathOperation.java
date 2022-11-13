@@ -1,3 +1,5 @@
+package polymorphism.lab;
+
 public class MathOperation {
 
     private MathOperation() {

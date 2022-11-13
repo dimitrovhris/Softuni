@@ -1,3 +1,5 @@
+package polymorphism.lab;
+
 public class Rectangle implements Shape{
     private Double height;
     private Double width;

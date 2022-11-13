@@ -1,3 +1,5 @@
+package polymorphism.lab;
+
 public abstract class Animal {
     private String name;
     private String favouriteFood;
