@@ -1,12 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Shape rect = new Rectangle(5.00, 4.00);
-        Shape circle = new Circle(3.00);
-        printShape(rect);
-        printShape(circle);
+        Animal cat = new Cat("Oscar", "Whiskas");
+        Animal dog = new Dog("Rocky", "Meat");
+        System.out.println(cat.explainSelf());
+        System.out.println(dog.explainSelf());
     }
-    private static void printShape(Shape shape){
-        System.out.println(shape.calculateArea());
-        System.out.println(shape.calculatePerimeter());
-    }
+
 }
