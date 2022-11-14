@@ -19,6 +19,6 @@ public abstract class Vehicle {
         this.fuelQuantity = fuelQuantity;
     }
 
-    public abstract String drive(String distance);
+    public abstract String drive(double distance);
     public abstract void refuel(double fuel);
 }

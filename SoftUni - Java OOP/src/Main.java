@@ -13,9 +13,10 @@ public class Main {
         Vehicle car = new Car(carQuantity, carConsumption);
         Vehicle truck = new Truck(truckQuantity, truckConsumption);
         int n = Integer.parseInt(sc.nextLine());
+        DecimalFormat decimalFormat = new DecimalFormat("0.##");
         while(n-- > 0){
             String[] commandData = sc.nextLine().split(" ");
-            String number = commandData[2];
+            double  number = Double.parseDouble(commandData[2]);
             switch(commandData[0]){
                 case "Drive":
                     if(commandData[1].equals("Car")){
@@ -26,14 +27,14 @@ public class Main {
                     break;
                 default:
                     if(commandData[1].equals("Car")){
-                        car.refuel(Double.parseDouble(number));
+                        car.refuel(number);
                     } else{
-                        truck.refuel(Double.parseDouble(number));
+                        truck.refuel(number);
                     }
                     break;
             }
         }
-        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+
         System.out.printf("Car: %.2f%n", car.getFuelQuantity());
         System.out.printf("Truck: %.2f", (truck.getFuelQuantity()));
     }
