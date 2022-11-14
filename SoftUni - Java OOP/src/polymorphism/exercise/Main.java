@@ -25,9 +25,9 @@ public class Main {
             double  number = Double.parseDouble(commandData[2]);
             switch(commandData[0]){
                 case "Drive":
-                    if(commandData[1].equals("polymorphism.exercise.Car")){
+                    if(commandData[1].equals("Car")){
                         System.out.println(car.drive(number));
-                    } else if(commandData[1].equals("polymorphism.exercise.Truck")){
+                    } else if(commandData[1].equals("Truck")){
                         System.out.println(truck.drive(number));
                     } else{
                         bus.driveFull(number);
@@ -37,9 +37,9 @@ public class Main {
                     System.out.println(bus.drive(number));
                     break;
                 case "Refuel":
-                    if(commandData[1].equals("polymorphism.exercise.Car")){
+                    if(commandData[1].equals("Car")){
                         car.refuel(number);
-                    } else if(commandData[1].equals("polymorphism.exercise.Truck")){
+                    } else if(commandData[1].equals("Truck")){
                         truck.refuel(number);
                     } else{
                         bus.refuel(number);
@@ -48,8 +48,8 @@ public class Main {
             }
         }
 
-        System.out.printf("polymorphism.exercise.Car: %.2f%n", car.getFuelQuantity());
-        System.out.printf("polymorphism.exercise.Truck: %.2f%n", (truck.getFuelQuantity()));
-        System.out.printf("polymorphism.exercise.Bus: %.2f", bus.getFuelQuantity());
+        System.out.printf("Car: %.2f%n", car.getFuelQuantity());
+        System.out.printf("Truck: %.2f%n", (truck.getFuelQuantity()));
+        System.out.printf("Bus: %.2f", bus.getFuelQuantity());
     }
 }
