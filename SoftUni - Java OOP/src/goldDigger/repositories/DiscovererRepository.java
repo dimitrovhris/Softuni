@@ -16,6 +16,7 @@ public class DiscovererRepository implements Repository<Discoverer> {
 
     @Override
     public void add(Discoverer discoverer) {
+
         discoverers.put(discoverer.getName(), discoverer);
     }
 
