@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class BaseMuseum implements Museum{
-    private List<String> exhibits;
+    private Collection<String> exhibits;
 
     @Override
     public Collection<String> getExhibits() {
