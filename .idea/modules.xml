@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Revision/Revision.iml" filepath="$PROJECT_DIR$/Revision/Revision.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SoftUni - Java Advanced/SoftUni - Java Advanced.iml" filepath="$PROJECT_DIR$/SoftUni - Java Advanced/SoftUni - Java Advanced.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SoftUni - Java OOP/SoftUni - Java OOP.iml" filepath="$PROJECT_DIR$/SoftUni - Java OOP/SoftUni - Java OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SoftUni - Programming Basics with Java/SoftUni - Programming Basics with Java.iml" filepath="$PROJECT_DIR$/SoftUni - Programming Basics with Java/SoftUni - Programming Basics with Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SoftUni - Spring Data/SoftUni - Spring Data.iml" filepath="$PROJECT_DIR$/SoftUni - Spring Data/SoftUni - Spring Data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Softuni.iml" filepath="$PROJECT_DIR$/.idea/Softuni.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Softuni - Programming Fundamentals/Softuni - Programming Fundamentals.iml" filepath="$PROJECT_DIR$/Softuni - Programming Fundamentals/Softuni - Programming Fundamentals.iml" />
+    </modules>
+  </component>
+</project>
